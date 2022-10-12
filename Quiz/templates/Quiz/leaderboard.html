@@ -1,0 +1,21 @@
+{% extends 'Quiz/dependencies.html' %}
+{% load static%}
+{% block content %}
+<div class="container-fluid" style="background-color: burlywood;">
+<h1 style="font-family: cursive; text-align: center;">Leaderboard</h1>
+    <center>
+        <table>
+        <th>
+            <span style="font-size: 25px; font-weight: bold;" class="mr-5">Name</span>
+            <span style="font-size: 25px; font-weight: bold;">Score</span>
+        </th>
+     {% for r in res %}   
+        <tr style="font-family: sans-serif;">
+            <td>{{r.name}}</td>
+        <td>{{r.score}}</td>
+    </tr>
+    {%endfor%}
+</table>
+</center>
+</div>
+{% endblock %}
